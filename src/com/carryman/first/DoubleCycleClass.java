@@ -1,3 +1,5 @@
+package com.carryman.first;
+
 import java.util.Scanner;
 
 public class DoubleCycleClass {

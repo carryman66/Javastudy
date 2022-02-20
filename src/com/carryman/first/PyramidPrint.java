@@ -1,3 +1,5 @@
+package com.carryman.first;
+
 public class PyramidPrint {
     public static void main(String[] args) {
 
