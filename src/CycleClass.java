@@ -98,11 +98,9 @@ public class CycleClass {
 
 
         /*do while循环*/
-        int i = 0;
+        int i = 1;
         do {
-
-
-            System.out.println(i);
+            System.out.println("你好 while" + i);
             i++;
         } while (i <= 10);
 
