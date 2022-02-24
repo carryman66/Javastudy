@@ -73,9 +73,6 @@ public class Practice1 {
 //        System.out.println(radius);
 
 
-
-
-
     }
 }
 
@@ -106,15 +103,16 @@ class A01 {
 
     }
 }
+
 /**
  * 2.A02类，定义方法find，实现查找某字符串数组中的元素，并且返回索引，
  * 找不到则返回-1
  */
-class A02{
-    public int findStringArraysIndex(String findString){
-        String [] stringArrays=new String[]{"你","好","守一"};
+class A02 {
+    public int findStringArraysIndex(String findString) {
+        String[] stringArrays = new String[]{"你", "好", "守一"};
         for (int i = 0; i < stringArrays.length; i++) {
-            if (stringArrays[i].equals(findString)){
+            if (stringArrays[i].equals(findString)) {
                 return i;
             }
         }
@@ -129,34 +127,34 @@ class A02{
  * 如果价格大于100则改成100
  * 否则不变
  */
-class Book{
+class Book {
     int price;
-    Book(int price){
+
+    Book(int price) {
         this.price = price;
     }
 
-    public String updatePrice(){
-        if (this.price>150){
-            this.price=150;
+    public String updatePrice() {
+        if (this.price > 150) {
+            this.price = 150;
             return "更改图书价格为150";
         }
         //this.price<=150 已经做了判断不是
-        else if ( this.price>100){
-            this.price=100;
+        else if (this.price > 100) {
+            this.price = 100;
             return "更改图书价格为100";
-        }
-        else return "图书价格小于100 价格不变";
+        } else return "图书价格小于100 价格不变";
     }
 }
 
 /**
  * 4.实现数组的拷贝功能，输入旧数组，返回一个新数组，元素和旧数组一样
  */
-class A03{
-    public int[] copyArray(int[] array){
+class A03 {
+    public int[] copyArray(int[] array) {
         int[] ints = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            ints[i]=array[i];
+            ints[i] = array[i];
         }
         return ints;
 
@@ -169,27 +167,30 @@ class A03{
  * 提供显示圆周长功能的方法，
  * 提供显示圆面积的方法
  */
-class Circle{
+class Circle {
     double radius;
-    Circle(){
+
+    Circle() {
 
     }
-    Circle(double radius){
-       this.radius= radius;
+
+    Circle(double radius) {
+        this.radius = radius;
     }
-    public void showPerimeter(){
+
+    public void showPerimeter() {
         double perimeter = 2 * Math.PI * this.radius;
-        System.out.println("当前圆周长为 "+perimeter);
+        System.out.println("当前圆周长为 " + perimeter);
     }
 
-    public void showArea(){
-        double area = Math.PI * this.radius*this.radius;
-        System.out.println("当前圆面积为 "+area);
+    public void showArea() {
+        double area = Math.PI * this.radius * this.radius;
+        System.out.println("当前圆面积为 " + area);
 
     }
 
-    public double getArea(double radius){
-         return   Math.PI * radius*radius;
+    public double getArea(double radius) {
+        return Math.PI * radius * radius;
 
     }
 
@@ -200,7 +201,7 @@ class Circle{
  * 6.四则运算
  */
 
-class Arithmetic{
+class Arithmetic {
     double num1;
     double num2;
 
@@ -209,19 +210,22 @@ class Arithmetic{
         this.num2 = num2;
     }
 
-    public double add(){
-        return this.num1+this.num2;
+    public double add() {
+        return this.num1 + this.num2;
     }
-    public double subtract(){
-        return this.num1-this.num2;
+
+    public double subtract() {
+        return this.num1 - this.num2;
     }
-    public double multiply(){
-        return this.num1*this.num2;
+
+    public double multiply() {
+        return this.num1 * this.num2;
     }
-    public Double divide(){
-        if (this.num2!=0){
-            return this.num1/this.num2;
-        }else {
+
+    public Double divide() {
+        if (this.num2 != 0) {
+            return this.num1 / this.num2;
+        } else {
             return null;
         }
 
@@ -231,7 +235,7 @@ class Arithmetic{
 /**
  * 7.创建小狗类，具有名字颜色年龄属性，具有show展示自己属性
  */
-class  Dog{
+class Dog {
     String name;
     int age;
     String color;
@@ -242,8 +246,8 @@ class  Dog{
         this.color = color;
     }
 
-    public void show(){
-        System.out.println(this.name+" "+this.age+" "+this.color);
+    public void show() {
+        System.out.println(this.name + " " + this.age + " " + this.color);
     }
 
 
@@ -254,27 +258,29 @@ class  Dog{
  * Employee 复原构造器
  */
 
-class Employee{
+class Employee {
     String name;
     char gender;
     int age;
     String job;
     double sal;
 
-    Employee(String job,double sal){
-        this.job=job;
-        this.sal=sal;
+    Employee(String job, double sal) {
+        this.job = job;
+        this.sal = sal;
     }
-    Employee(String name, char gender ,int age){
-        this.name=name;
-        this.gender=gender;
-        this.age=age;
-    }
-    Employee(String name,char gender, int age ,String job,double sal){
 
-        this(name,gender,age);
-        this.job=job;
-        this.sal=sal;
+    Employee(String name, char gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    Employee(String name, char gender, int age, String job, double sal) {
+
+        this(name, gender, age);
+        this.job = job;
+        this.sal = sal;
     }
 
 }
@@ -283,13 +289,13 @@ class Employee{
  * 9.定义一个PassObject
  * 定义一个方法printAreas()
  */
-class PassObject{
-    public void printAreas(Circle circle,int times){
+class PassObject {
+    public void printAreas(Circle circle, int times) {
         System.out.println("半径\t面积");
 
         for (int i = 1; i <= times; i++) {
             double area = circle.getArea(i);
-            System.out.println(i+"\t"+area);
+            System.out.println(i + "\t" + area);
         }
     }
 }

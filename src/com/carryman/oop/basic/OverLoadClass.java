@@ -12,6 +12,7 @@ public class OverLoadClass {
         int a =1;
         a=a;
         System.out.println(a);
+
     }
 }
 

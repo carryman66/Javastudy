@@ -6,6 +6,9 @@ public class CloneClass {
 
 
     }
+     void t(){
+
+    }
 
 }
 
@@ -17,6 +20,7 @@ class A{
 
 
     public int factorial(int number){
+        new CloneClass().t();
         if (number==1){
             return 1;
         }else {
