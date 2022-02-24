@@ -1,4 +1,4 @@
-package com.carryman.oop;
+package com.carryman.oop.basic;
 
 public class FibonacciClass {
     public static void main(String[] args) {

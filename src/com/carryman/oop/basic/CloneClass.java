@@ -1,4 +1,4 @@
-package com.carryman.oop;
+package com.carryman.oop.basic;
 
 public class CloneClass {
     /*克隆对象 将属性一个一个复制*/
