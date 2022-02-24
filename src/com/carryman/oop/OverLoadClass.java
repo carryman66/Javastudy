@@ -8,6 +8,10 @@ public class OverLoadClass {
         Method method = new Method();
 
         System.out.println(method.showScore("守一", 11, 11, 11));
+
+        int a =1;
+        a=a;
+        System.out.println(a);
     }
 }
 
@@ -32,5 +36,9 @@ class Method{
             sum+=score[i];
         }
         return name+"的成绩为："+sum;
+    }
+
+    public void a(){
+
     }
 }
