@@ -62,7 +62,7 @@ public class HouseView {
             System.out.print("状态: ");
             String  state = Utility.readString(3, "");
             if (!"".equals(state)){
-                searchHouse.setAddress(state);
+                searchHouse.setState(state);
             }
             System.out.println("房屋修改成功");
 
