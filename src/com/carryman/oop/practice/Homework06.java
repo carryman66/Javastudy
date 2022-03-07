@@ -34,11 +34,15 @@ class Boat implements Vehicles{
 
 class TrafficFactory{
 
+
     private static Horse horse=new Horse();
 
     private TrafficFactory(){}
 
+
     public static Horse getHorse(){
+
+
         return horse;
     }
 
