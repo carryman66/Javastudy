@@ -23,10 +23,20 @@ public class HashSetTest {
 //            System.out.println(next);
 //        }
         HashSet hashSet = new HashSet();
-        hashSet.add("动心忍性");
-        hashSet.add("增益其所不能");
-        hashSet.add("格物致知");
-        hashSet.add("出示的精神做入世的事情");
+        hashSet.add("动心忍性1");
+        hashSet.add("增益其所不能2");
+        hashSet.add("格物致知3");
+        hashSet.add("出示的精神做入世的事情4");
+        hashSet.add("出示的精神做入世的事情5");
+        hashSet.add("出示的精神做入世的事情6");
+        hashSet.add("出示的精神做入世的事情7");
+        hashSet.add("出示的精神做入世的事情8");
+        hashSet.add("出示的精神做入世的事情9");
+        hashSet.add("出示的精神做入世的事情10");
+        hashSet.add("出示的精神做入世的事情11");
+        hashSet.add("出示的精神做入世的事情12");
+        hashSet.add("出示的精神做入世的事情13");
+        hashSet.add("出示的精神做入世的事情14");
 
 
         Iterator iterator = hashSet.iterator();

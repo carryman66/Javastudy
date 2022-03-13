@@ -34,5 +34,12 @@ public class LinkedListTest {
 
             System.out.println(o);
         }
+
+
+        for (int i = 0; i < linkedList.size(); i++) {
+            Object o = linkedList.get(i);
+
+            System.out.println(o);
+        }
     }
 }
