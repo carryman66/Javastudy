@@ -12,7 +12,7 @@ import java.util.Set;
 public class test {
     public static void main(String[] args) {
         Map map = new HashMap();
-        map.put("123", 123);
+        map.put(null, 123);
         map.put("15", 123);
         map.put("143", 123);
         map.put("163", 123);
