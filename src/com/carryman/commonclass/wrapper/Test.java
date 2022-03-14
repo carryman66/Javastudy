@@ -51,7 +51,7 @@ public class Test {
         System.out.println(Arrays.toString(bytes));
 
         Emp emp = new Emp("王", 10000);
-       Arrays
+
 
 
 
