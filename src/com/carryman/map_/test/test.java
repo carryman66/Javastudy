@@ -1,9 +1,6 @@
 package com.carryman.map_.test;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author carry man
@@ -14,11 +11,18 @@ public class test {
         Map map = new HashMap();
         map.put(null, 123);
         map.put("15", 123);
-        map.put("143", 123);
+        map.put("15", 122223);
         map.put("163", 123);
         map.put("173", 123);
 
         Set set = map.entrySet();
+
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Object next = iterator.next();
+            System.out.println(next);
+        }
+
 
         Set set1 = map.keySet();
 
