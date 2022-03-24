@@ -24,49 +24,61 @@ public class Work01 {
         thread3.start();
     }
 }
+
 //使用Thread，售票
-class SellTicket extends Thread{
+class SellTicket extends Thread {
     //线程共享
-    private static int num=100;
+    private static int num = 100;
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
 
-            if (num<=0){
+            if (num <= 0) {
                 break;
             }
 
             try {
-                Thread.sleep(1);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName()+"窗口售出一张票，剩余票数"+--num);
+            System.out.println(Thread.currentThread().getName() + "窗口售出一张票，剩余票数" + --num);
 
         }
     }
 }
 
-class SellTicket02 implements Runnable{
+class SellTicket02 implements Runnable {
     private int num = 100;
+
+    private boolean flag = true;
+
+
+    public synchronized void mai() {
+        if (num <= 0) {
+            flag = false;
+            return;
+        }
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + "窗口售出一张票，剩余票数" + --num);
+
+    }
 
     @Override
     public void run() {
-        while (true){
-            if (num<=0){
-                break;
-            }
-
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(Thread.currentThread().getName()+"窗口售出一张票，剩余票数"+--num);
+        while (flag) {
+            mai();
 
         }
-        }
 
 
+    }
 }
+
+
