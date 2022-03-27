@@ -19,7 +19,7 @@ public class Server {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
         String s = bufferedReader.readLine();
-        OutputStream outputStream = accept.getOutputStream();
+
         byte[] bytes;
         if ("高山流水".equals(s)) {
 
@@ -29,6 +29,7 @@ public class Server {
         } else {
             bytes = StreamUtils.streamToByteArray(new BufferedInputStream(new FileInputStream("d:\\2.jpg")));
         }
+        OutputStream outputStream = accept.getOutputStream();
         outputStream.write(bytes);
         outputStream.flush();
         accept.shutdownOutput();
